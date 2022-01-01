@@ -1,0 +1,111 @@
+body {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding: 0; */
+  /* margin: 0; */
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+div.person__header {
+  text-transform: uppercase;
+  margin: 10vw;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: 2px;
+}
+div.persons {
+  padding: 0;
+  margin: 10vw;
+  margin-top: 0;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s ease-in-out;
+}
+div.person {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+}
+div.person__image {
+  /* height: 100%; */
+  width: 100vw;
+  height: 100%;
+}
+div.person__image img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+div.person__info {
+  width: 60%;
+  margin: 0;
+}
+h2.person__info__header {
+  font-size: 32px;
+  /* line-height: 37px; */
+  text-transform: uppercase;
+}
+h1.person__name {
+  font-size: 56px;
+  line-height: 64px;
+  text-transform: uppercase;
+}
+p.person__info {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+div.circles {
+  margin-left: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+div.circle {
+  cursor: pointer;
+  opacity: 0.3;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+}
+div.circle:first-child {
+  opacity: 1;
+}
+div.nav__bar nav a {
+  position: relative;
+}
+div.nav__bar nav a:not(:nth-child(3)):after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  bottom: 10px;
+  left: 0;
+  transition: 0.75s;
+  opacity: 0;
+}
+div.nav__bar nav a:hover::after {
+  bottom: -15px;
+  opacity: 1;
+}
+div.person:first-child h2.person__info__header,
+div.person:first-child h1.person__name,
+div.person:first-child p.person__info {
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: 0.75s;
+}
+div.person:first-child div.person__image {
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: 0.75s;
+}
